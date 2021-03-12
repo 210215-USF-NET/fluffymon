@@ -1,59 +1,52 @@
 ﻿using FMModels;
 using System;
 using System.Collections.Generic;
-using FMDL;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace FMBL
+namespace FMDL
 {
-    public class FluffyBL : IFluffyBL
+    public class FluffyRepo : IFluffyRepo
     {
-        private IFluffyRepo _repo;
-
-
-        public FluffyBL(IFluffyRepo repo)
-        {
-            _repo = repo; 
-        }
-
         public Fluffymon AddFluffymons(Fluffymon newFluffymon)
         {
-            return _repo.AddFluffymons(newFluffymon);
+            throw new NotImplementedException();
         }
 
-        public void AddUser(User uName)
+        public User AddUser(User userName)
         {
-            _repo.AddUser(uName);
+            throw new NotImplementedException();
         }
 
         public UserFluffymon AddUserFluffymon(UserFluffymon newUFM)
         {
-            return _repo.AddUserFluffymon(newUFM);
+            throw new NotImplementedException();
         }
 
         public List<Element> GetElements()
         {
-            return _repo.GetElements();
+            throw new NotImplementedException();
         }
 
         public List<Fluffymon> GetFluffymons()
         {
-            return _repo.GetFluffymons();
+            throw new NotImplementedException();
         }
 
         public User GetUserByName(string name)
         {
-
-            return _repo.GetUserByName(name);
+            throw new NotImplementedException();
         }
 
         public List<UserFluffymon> GetUserFluffymons()
         {
-            return _repo.GetUserFluffymons();
+            throw new NotImplementedException();
         }
 
         public List<User> GetUsers()
         {
-            return _repo.GetUsers();
+            throw new NotImplementedException();
         }
     }
 }

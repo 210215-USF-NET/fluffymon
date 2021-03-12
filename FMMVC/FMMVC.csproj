@@ -5,7 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FMBL\FMBL.csproj" />
+    <ProjectReference Include="..\FMDL\FMDL.csproj" />
     <ProjectReference Include="..\FMModels\FMModels.csproj" />
   </ItemGroup>
 
