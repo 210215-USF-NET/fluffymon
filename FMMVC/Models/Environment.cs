@@ -30,49 +30,49 @@ namespace FMMVC.Models
             return map[tx, ty];
         }
         public static void north(){
-            int tempy = y;
+            int tempy = x;
             tempy -= 1;
             if (tempy >= 0)
             {
-                y = tempy;
+                x = tempy;
             }
             }
         public static void south()
         {
-            int tempy = y;
+            int tempy = x;
             tempy += 1;
-            if (tempy < 5)
+            if (tempy <= 5)
             {
-                y = tempy;
+                x = tempy;
             }
         }
 
 
         public static void east()
         {
-            int tempx = x;
+            int tempx = y;
             tempx += 1;
-            if (tempx >= 0)
+            if (tempx <= 4)
             {
-                x = tempx;
+                y = tempx;
             }
         }
 
         public static void west()
         {
-            int tempx = x;
+            int tempx = y;
             tempx -= 1;
-            if (tempx < 6)
+            if (tempx >= 0)
             {
-                x = tempx;
+                y = tempx;
             }
         }
 
         public static string Getnorth()
         {
-            int tempy = y;
+            int tempy = x;
             tempy -= 1;
-            if (tempy >= 0)
+            if (tempy <= 0)
             {
                tempy=0;
             }
@@ -80,36 +80,36 @@ namespace FMMVC.Models
         }
         public static string Getsouth()
         {
-            int tempy = y;
+            int tempy = x;
             tempy += 1;
             if (tempy >= 5)
             {
-                y = 5;
+                tempy = 5;
             }
-            return GetLocation(x,tempy);
+            return GetLocation(tempy,y);
         }
 
 
         public static string Geteast()
         {
-            int tempy = x;
+            int tempy = y;
             tempy += 1;
-            if (tempy >= 5)
+            if (tempy >= 4)
             {
-                tempy=5;
+                tempy=4;
             }
-            return GetLocation(tempy,y);
+            return GetLocation(x,tempy);
         }
 
         public static string Getwest()
         {
-            int tempy = x;
+            int tempy = y;
             tempy -= 1;
             if (tempy <= 0)
             {
                 tempy = 0;
             }
-            return GetLocation(tempy, y);
+            return GetLocation(x,tempy);
         }
 
 

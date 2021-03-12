@@ -19,53 +19,117 @@ namespace FMMVC.Controllers
         // GET: EnvironmentController1
         public ActionResult Index()
         {
+            ViewData["North"] = env.Getnorth();
+            ViewData["South"] = env.Getsouth();
+            ViewData["East"] = env.Geteast();
+            ViewData["West"] = env.Getwest();
             return RedirectToAction(env.GetLocation());
         }
         public ActionResult BendyRoad()
         {
+            ViewData["North"] = env.Getnorth();
+            ViewData["South"] = env.Getsouth();
+            ViewData["East"] = env.Geteast();
+            ViewData["West"] = env.Getwest();
             return new Random().Next(10) == 0 ? Encounter() : View();
+
+
+            return View();
+
         }
 
         public ActionResult Graveyard()
         {
+
+            ViewData["North"] = env.Getnorth();
+            ViewData["South"] = env.Getsouth();
+            ViewData["East"] = env.Geteast();
+            ViewData["West"] = env.Getwest();
             return new Random().Next(10) == 0 ? Encounter() : View();
+
+            return View();
+
         }
 
         public ActionResult Hills()
         {
+            ViewData["North"] = env.Getnorth();
+            ViewData["South"] = env.Getsouth();
+            ViewData["East"] = env.Geteast();
+            ViewData["West"] = env.Getwest();
             return new Random().Next(10) == 0 ? Encounter() : View();
+
+
+            return View();
+
         }
 
         public ActionResult Wall()
         {
+            ViewData["North"] = env.Getnorth();
+            ViewData["South"] = env.Getsouth();
+            ViewData["East"] = env.Geteast();
+            ViewData["West"] = env.Getwest();
             return View();
         }
 
         public ActionResult Kitchen() {
+
+            ViewData["North"] = env.Getnorth();
+            ViewData["South"] = env.Getsouth();
+            ViewData["East"] = env.Geteast();
+            ViewData["West"] = env.Getwest();
             return new Random().Next(10) == 0 ? Encounter() : View();
+
+            return View();
+
         }
 
         public ActionResult Road()
         {
+            ViewData["North"] = env.Getnorth();
+            ViewData["South"] = env.Getsouth();
+            ViewData["East"] = env.Geteast();
+            ViewData["West"] = env.Getwest();
             return new Random().Next(10) == 0 ? Encounter() : View();
+
+ 
+            return View();
+
         }
 
 
         public ActionResult School()
         {
+            ViewData["North"] = env.Getnorth();
+            ViewData["South"] = env.Getsouth();
+            ViewData["East"] = env.Geteast();
+            ViewData["West"] = env.Getwest();
             return new Random().Next(10) == 0 ? Encounter() : View();
+
+     
+            return View();
+
         }
 
         public ActionResult Library()
         {
+
             return new Random().Next(10) == 0 ? Encounter() : View();
+
+            ViewData["North"] = env.Getnorth();
+            ViewData["South"] = env.Getsouth();
+            ViewData["East"] = env.Geteast();
+            ViewData["West"] = env.Getwest();
+            return View();
+
         }
 
 
         public ActionResult North()
         {
             env.north();
-            
+
             return RedirectToAction(env.GetLocation());
 
         }
