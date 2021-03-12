@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FMBL\FMBL.csproj" />
     <ProjectReference Include="..\FMDL\FMDL.csproj" />
     <ProjectReference Include="..\FMModels\FMModels.csproj" />
