@@ -22,6 +22,7 @@ namespace FMBL
 
         public void AddUser(User uName)
         {
+            uName.UserHp = 100;
             _repo.AddUser(uName);
         }
 
@@ -37,7 +38,6 @@ namespace FMBL
 
         public User GetUserByName(string name)
         {
-
             return _repo.GetUserByName(name);
         }
 
