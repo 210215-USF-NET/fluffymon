@@ -33,9 +33,6 @@ namespace FMMVC.Controllers
             ViewData["West"] = env.Getwest();
             return new Random().Next(10) == 0 ? Encounter() : View();
 
-
-            return View();
-
         }
 
         public ActionResult Graveyard()
@@ -47,8 +44,6 @@ namespace FMMVC.Controllers
             ViewData["West"] = env.Getwest();
             return new Random().Next(10) == 0 ? Encounter() : View();
 
-            return View();
-
         }
 
         public ActionResult Hills()
@@ -58,9 +53,6 @@ namespace FMMVC.Controllers
             ViewData["East"] = env.Geteast();
             ViewData["West"] = env.Getwest();
             return new Random().Next(10) == 0 ? Encounter() : View();
-
-
-            return View();
 
         }
 
@@ -94,7 +86,7 @@ namespace FMMVC.Controllers
             return new Random().Next(10) == 0 ? Encounter() : View();
 
  
-            return View();
+          //  return View();
 
         }
 
@@ -108,20 +100,19 @@ namespace FMMVC.Controllers
             return new Random().Next(10) == 0 ? Encounter() : View();
 
      
-            return View();
+           // return View();
 
         }
 
         public ActionResult Library()
         {
-
-            return new Random().Next(10) == 0 ? Encounter() : View();
-
             ViewData["North"] = env.Getnorth();
             ViewData["South"] = env.Getsouth();
             ViewData["East"] = env.Geteast();
             ViewData["West"] = env.Getwest();
-            return View();
+            return new Random().Next(10) == 0 ? Encounter() : View();
+
+
 
         }
 
