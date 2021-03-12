@@ -18,18 +18,21 @@ namespace FMDL
         public Fluffymon AddFluffymons(Fluffymon newFluffymon)
         {
             _context.Fluffymons.Add(newFluffymon);
+            _context.SaveChanges();
             return newFluffymon;
         }
 
         public User AddUser(User userName)
         {
             _context.Users.Add(userName);
+            _context.SaveChanges();
             return userName;
         }
 
         public UserFluffymon AddUserFluffymon(UserFluffymon newUFM)
         {
             _context.UserFluffymons.Add(newUFM);
+            _context.SaveChanges();
             return newUFM;
         }
 
