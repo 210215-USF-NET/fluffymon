@@ -22,17 +22,13 @@ namespace FMBL
 
         public void AddUser(User uName)
         {
+            uName.UserHp = 100;
             _repo.AddUser(uName);
         }
 
         public UserFluffymon AddUserFluffymon(UserFluffymon newUFM)
         {
             return _repo.AddUserFluffymon(newUFM);
-        }
-
-        public List<Element> GetElements()
-        {
-            return _repo.GetElements();
         }
 
         public List<Fluffymon> GetFluffymons()
@@ -42,7 +38,6 @@ namespace FMBL
 
         public User GetUserByName(string name)
         {
-
             return _repo.GetUserByName(name);
         }
 

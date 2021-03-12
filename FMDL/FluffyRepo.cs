@@ -1,6 +1,7 @@
 ﻿using FMModels;
 using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,44 +10,50 @@ namespace FMDL
 {
     public class FluffyRepo : IFluffyRepo
     {
+        private readonly FluffyDBContext _context;
+        public FluffyRepo(FluffyDBContext context)
+        {
+            _context = context;
+        }
         public Fluffymon AddFluffymons(Fluffymon newFluffymon)
         {
-            throw new NotImplementedException();
+            _context.Fluffymons.Add(newFluffymon);
+            _context.SaveChanges();
+            return newFluffymon;
         }
 
         public User AddUser(User userName)
         {
-            throw new NotImplementedException();
+            _context.Users.Add(userName);
+            _context.SaveChanges();
+            return userName;
         }
 
         public UserFluffymon AddUserFluffymon(UserFluffymon newUFM)
         {
-            throw new NotImplementedException();
-        }
-
-        public List<Element> GetElements()
-        {
-            throw new NotImplementedException();
+            _context.UserFluffymons.Add(newUFM);
+            _context.SaveChanges();
+            return newUFM;
         }
 
         public List<Fluffymon> GetFluffymons()
         {
-            throw new NotImplementedException();
+            return _context.Fluffymons.AsNoTracking().ToList();
         }
 
         public User GetUserByName(string name)
         {
-            throw new NotImplementedException();
+            return _context.Users.Where(user => user.UserName.Equals(name)).AsNoTracking().FirstOrDefault();
         }
 
         public List<UserFluffymon> GetUserFluffymons()
         {
-            throw new NotImplementedException();
+            return _context.UserFluffymons.AsNoTracking().ToList();
         }
 
         public List<User> GetUsers()
         {
-            throw new NotImplementedException();
+            return _context.Users.AsNoTracking().ToList();
         }
     }
 }
