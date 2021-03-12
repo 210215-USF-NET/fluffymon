@@ -12,7 +12,7 @@ namespace FMMVC.Controllers
         // GET: EnvironmentController1
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction(env.GetLocation());
         }
         public ActionResult BendyRoad()
         {
