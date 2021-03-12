@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMModels", "FMModels\FMModels.csproj", "{89426B55-87A0-4720-BE98-591B31D03A7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FMModels", "FMModels\FMModels.csproj", "{89426B55-87A0-4720-BE98-591B31D03A7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMBL", "FMBL\FMBL.csproj", "{C5AD7666-373C-477A-AB21-C43617957E73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMDL", "FMDL\FMDL.csproj", "{FACE1B07-6795-43F7-99D4-0A717963013B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMMVC", "FMMVC\FMMVC.csproj", "{AE4542DE-7204-49BF-AE95-78C5A36A9020}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{89426B55-87A0-4720-BE98-591B31D03A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89426B55-87A0-4720-BE98-591B31D03A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89426B55-87A0-4720-BE98-591B31D03A7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5AD7666-373C-477A-AB21-C43617957E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5AD7666-373C-477A-AB21-C43617957E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5AD7666-373C-477A-AB21-C43617957E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5AD7666-373C-477A-AB21-C43617957E73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FACE1B07-6795-43F7-99D4-0A717963013B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FACE1B07-6795-43F7-99D4-0A717963013B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FACE1B07-6795-43F7-99D4-0A717963013B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FACE1B07-6795-43F7-99D4-0A717963013B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE4542DE-7204-49BF-AE95-78C5A36A9020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE4542DE-7204-49BF-AE95-78C5A36A9020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE4542DE-7204-49BF-AE95-78C5A36A9020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE4542DE-7204-49BF-AE95-78C5A36A9020}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

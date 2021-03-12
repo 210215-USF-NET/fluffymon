@@ -1,4 +1,6 @@
-﻿namespace FMModels
+﻿using System;
+
+namespace FMModels
 {
     public enum Element
     {
