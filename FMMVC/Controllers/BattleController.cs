@@ -14,6 +14,14 @@ namespace FMMVC.Controllers
         {
             return View();
         }
+        public ActionResult BattleWild()
+        {
+            return View();
+        }
+        public ActionResult BattleUser()
+        {
+            return View();
+        }
 
         // GET: BattleController/Details/5
         public ActionResult Details(int id)

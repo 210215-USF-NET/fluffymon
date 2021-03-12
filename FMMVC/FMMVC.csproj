@@ -9,8 +9,4 @@
     <ProjectReference Include="..\FMModels\FMModels.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Battle\" />
-  </ItemGroup>
-
 </Project>
