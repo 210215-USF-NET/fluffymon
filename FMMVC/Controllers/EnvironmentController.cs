@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using env=FMMVC.Models.Environment;
 namespace FMMVC.Controllers
 {
     public class EnvironmentController : Controller
@@ -12,18 +12,89 @@ namespace FMMVC.Controllers
         // GET: EnvironmentController1
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction(env.GetLocation());
         }
         public ActionResult BendyRoad()
         {
             return View();
         }
 
+        public ActionResult Graveyard()
+        {
+            return View();
+        }
+
+        public ActionResult Hills()
+        {
+            return View();
+        }
+
+        public ActionResult Wall()
+        {
+            return View();
+        }
+
+        public ActionResult Kitchen() {
+            return View();
+        }
+
+        public ActionResult Road()
+        {
+            return View();
+        }
+
+
+        public ActionResult School()
+        {
+            return View();
+        }
+
+        public ActionResult Library()
+        {
+            return View();
+        }
+
+
         public ActionResult North()
         {
-            return RedirectToAction("BendyRoad");
+            env.north();
+            
+            return RedirectToAction(env.GetLocation());
 
-        } 
+        }
+
+        public ActionResult South()
+        {
+            env.south();
+
+            return RedirectToAction(env.GetLocation());
+
+        }
+
+
+        public ActionResult West()
+        {
+            env.west();
+
+            return RedirectToAction(env.GetLocation());
+        }
+
+
+        public ActionResult East()
+        {
+            env.east();
+
+
+            return RedirectToAction(env.GetLocation());
+
+        }
+
+
+
+
+
+
+
 
         // GET: EnvironmentController1/Details/5
         public ActionResult Details(int id)

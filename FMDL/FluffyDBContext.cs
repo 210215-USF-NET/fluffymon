@@ -16,9 +16,11 @@ namespace FMDL
         {
         }
 
+
         public DbSet<Fluffymon> Fluffymons { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserFluffymon> UserFluffymons { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
