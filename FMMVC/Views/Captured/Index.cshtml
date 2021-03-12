@@ -1,0 +1,49 @@
+﻿@model IEnumerable<FMModels.UserFluffymon>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Fluffymon.FluffymonName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fluffymon.Element)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fluffymon.Fluffiness)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fluffymon.AES)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fluffymon.MGTR)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fluffymon.FluffymonName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fluffymon.Element)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fluffymon.Fluffiness)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fluffymon.AES)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fluffymon.MGTR)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
