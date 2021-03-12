@@ -71,7 +71,21 @@
             @RenderBody()
         </main>
     </div>
-
+    @if (ViewData["North"] != null)
+    {
+    <div>
+        to your north you see a @ViewData["North"]
+    </div>
+    <div>
+        to your south you see a @ViewData["South"]
+    </div>
+    <div>
+        to your east you see a @ViewData["East"]
+    </div>
+    <div>
+        to your west you see a @ViewData["West"]
+    </div>
+    }
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2021 - FMMVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
