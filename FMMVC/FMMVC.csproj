@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FMBL\FMBL.csproj" />
+    <ProjectReference Include="..\FMDL\FMDL.csproj" />
     <ProjectReference Include="..\FMModels\FMModels.csproj" />
   </ItemGroup>
 

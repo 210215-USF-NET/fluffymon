@@ -1,3 +1,5 @@
+using FMBL;
+using FMDL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -23,6 +25,15 @@ namespace FMMVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDistributedMemoryCache();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromDays(1);
+                options.Cookie.IsEssential = true;
+                options.Cookie.HttpOnly = true;
+            });
+            services.AddScoped<IFluffyRepo, FluffyRepo>();
+            services.AddScoped<IFluffyBL, FluffyBL>();
             services.AddControllersWithViews();
         }
 
@@ -45,6 +56,8 @@ namespace FMMVC
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
