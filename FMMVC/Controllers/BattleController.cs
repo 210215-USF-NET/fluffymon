@@ -24,6 +24,14 @@ namespace FMMVC.Controllers
         }
         public ActionResult Fight()
         {
+            /*
+             *Wild Fluffymon = Attacker, User Fluffymon = Defender
+             *
+             DMGDef = Defender.Fluffiness - Attacker.AES
+             Attacker.Fluffiness = Attacker.Fluffiness - DMGDef
+             DMGAtk = Defender.Fluffiness - Defender.AES
+             Defender.Fluffiness = Defender.Fluffiness - DMGAtk
+             */
             return View("BattleWild");
         }
         // GET: BattleController/Details/5
