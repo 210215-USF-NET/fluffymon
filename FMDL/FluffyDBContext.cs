@@ -15,9 +15,14 @@ namespace FMDL
         protected FluffyDBContext()
         {
         }
-        //declare to EF Core that these are the models I want to be persisted to my db
 
-       // public DbSet<Element>
+        public DbSet<Fluffymon> Fluffymons { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<UserFluffymon> UserFluffymons { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
