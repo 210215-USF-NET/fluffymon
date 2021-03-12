@@ -35,8 +35,7 @@ namespace StoreMVC.Controllers
             {
                 User user = new User();
                 user.UserName = userVM.UserName;
-                //string blOutput = FMBL.CreateUser(user);
-                string blOutput = null;
+                string blOutput = fluffyBL.CreateUser(user);
                 if (blOutput == null)
                 {
                     return RedirectToAction("Login");
@@ -57,8 +56,7 @@ namespace StoreMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                //User user = FMBL.GetUserByName(userVM.UserName);
-                User user = new User { UserId = 1, UserName = "asdf" };
+                User user = fluffyBL.GetUserByName(userVM.UserName);
                 if (user == null)
                 {
                     return NotFound();
