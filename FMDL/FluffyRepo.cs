@@ -9,6 +9,11 @@ namespace FMDL
 {
     public class FluffyRepo : IFluffyRepo
     {
+        private readonly FluffyDBContext _context;
+        public FluffyRepo(FluffyDBContext context)
+        {
+            _context = context;
+        }
         public Fluffymon AddFluffymons(Fluffymon newFluffymon)
         {
             throw new NotImplementedException();
