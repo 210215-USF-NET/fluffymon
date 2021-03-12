@@ -1,6 +1,7 @@
 ﻿using FMModels;
 using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,22 +35,22 @@ namespace FMDL
 
         public List<Fluffymon> GetFluffymons()
         {
-            throw new NotImplementedException();
+            return _context.Fluffymons.AsNoTracking().ToList();
         }
 
         public User GetUserByName(string name)
         {
-            throw new NotImplementedException();
+            return _context.Users.Where(user => user.UserName.Equals(name)).AsNoTracking().FirstOrDefault();
         }
 
         public List<UserFluffymon> GetUserFluffymons()
         {
-            throw new NotImplementedException();
+            return _context.UserFluffymons.AsNoTracking().ToList();
         }
 
         public List<User> GetUsers()
         {
-            throw new NotImplementedException();
+            return _context.Users.AsNoTracking().ToList();
         }
     }
 }
