@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FMBL;
+using FMModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,6 +11,11 @@ namespace FMMVC.Controllers
 {
     public class EnvironmentController : Controller
     {
+        private IFluffyBL fluffyBL;
+        public EnvironmentController(IFluffyBL fluffyBL)
+        {
+            this.fluffyBL = fluffyBL;
+        }
         // GET: EnvironmentController1
         public ActionResult Index()
         {
@@ -16,17 +23,17 @@ namespace FMMVC.Controllers
         }
         public ActionResult BendyRoad()
         {
-            return View();
+            return new Random().Next(10) == 0 ? Encounter() : View();
         }
 
         public ActionResult Graveyard()
         {
-            return View();
+            return new Random().Next(10) == 0 ? Encounter() : View();
         }
 
         public ActionResult Hills()
         {
-            return View();
+            return new Random().Next(10) == 0 ? Encounter() : View();
         }
 
         public ActionResult Wall()
@@ -35,23 +42,23 @@ namespace FMMVC.Controllers
         }
 
         public ActionResult Kitchen() {
-            return View();
+            return new Random().Next(10) == 0 ? Encounter() : View();
         }
 
         public ActionResult Road()
         {
-            return View();
+            return new Random().Next(10) == 0 ? Encounter() : View();
         }
 
 
         public ActionResult School()
         {
-            return View();
+            return new Random().Next(10) == 0 ? Encounter() : View();
         }
 
         public ActionResult Library()
         {
-            return View();
+            return new Random().Next(10) == 0 ? Encounter() : View();
         }
 
 
@@ -163,6 +170,24 @@ namespace FMMVC.Controllers
             {
                 return View();
             }
+        }
+
+        public ActionResult Encounter()
+        {
+            List<Fluffymon> fluffymon = fluffyBL.GetFluffymons();
+            if (fluffymon.Count == 0) throw new Exception("No fluffymon in db");
+            int index = new Random().Next(0, fluffymon.Count);
+            return View(fluffymon[index]);
+        }
+
+        [HttpPost]
+        public ActionResult Encounter(Fluffymon fmon)
+        {
+            UserFluffymon ufm = new UserFluffymon();
+            ufm.UserId = (int)HttpContext.Session.GetInt32("UserId");
+            ufm.FluffymonId = fmon.FluffymonId;
+            fluffyBL.AddUserFluffymon(ufm);
+            return Redirect("/");
         }
     }
 }
