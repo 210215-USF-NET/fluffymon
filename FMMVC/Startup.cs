@@ -1,3 +1,4 @@
+
 using FMBL;
 using FMDL;
 using Microsoft.AspNetCore.Builder;
@@ -33,7 +34,7 @@ namespace FMMVC
                 options.Cookie.HttpOnly = true;
             });
             services.AddScoped<IFluffyRepo, FluffyRepo>();
-            services.AddScoped<IFluffyBL, FluffyBL>();
+           services.AddScoped<IFluffyBL, FluffyBL>();
             services.AddControllersWithViews();
         }
 
