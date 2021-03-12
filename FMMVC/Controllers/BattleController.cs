@@ -22,7 +22,10 @@ namespace FMMVC.Controllers
         {
             return View();
         }
-
+        public ActionResult Fight()
+        {
+            return View();
+        }
         // GET: BattleController/Details/5
         public ActionResult Details(int id)
         {
