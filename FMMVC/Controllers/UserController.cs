@@ -35,12 +35,8 @@ namespace StoreMVC.Controllers
             {
                 User user = new User();
                 user.UserName = userVM.UserName;
-                string blOutput = fluffyBL.CreateUser(user);
-                if (blOutput == null)
-                {
-                    return RedirectToAction("Login");
-                }
-                return BadRequest(blOutput);
+                fluffyBL.AddUser(user);
+                return RedirectToAction("Login");
             }
             return BadRequest("Invalid model state");
         }
