@@ -16,6 +16,6 @@ namespace FMDL
         {
         }
         //declare to EF Core that these are the models I want to be persisted to my db
-        public DbSet<Element> 
+       // public DbSet<Element>
     }
 }
