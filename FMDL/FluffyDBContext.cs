@@ -23,6 +23,19 @@ namespace FMDL
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Fluffymon>()
+                .Property(Fluffymon => Fluffymon.FluffymonId)
+                .ValueGeneratedOnAdd();
+            modelBuilder.Entity<User>()
+                .Property(User => User.UserId)
+                .ValueGeneratedOnAdd();
+            modelBuilder.Entity<UserFluffymon>()
+                .Property(UserFluffymon => UserFluffymon.UserFluffymonId)
+                .ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<UserFluffymon>()
+                .HasKey(uf => new { uf.FluffymonId, uf.UserId });
         }
     }
 }
