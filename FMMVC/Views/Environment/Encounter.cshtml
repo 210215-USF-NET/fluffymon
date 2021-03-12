@@ -1,0 +1,31 @@
+﻿@model FMModels.Fluffymon
+
+@{
+    ViewData["Title"] = "Encounter";
+}
+
+<h1>Encounter</h1>
+<h6>You ran into a wild @Model.FluffymonName</h6>
+<hr />
+<div class="row">
+    <p>Element: @Model.Element</p>
+    <br />
+    <p>Fluffiness: @Model.Fluffiness</p>
+    <br />
+    <p>Anime Eye Size: @Model.AES</p>
+    <br />
+    <p>Magical Girl Transformation Rate: @Model.MGTR</p>
+    <br />
+    <div class="col-md-4">
+        <form asp-action="Encounter">
+            <input type="hidden" asp-for="FluffymonId" value=@Model.FluffymonId />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

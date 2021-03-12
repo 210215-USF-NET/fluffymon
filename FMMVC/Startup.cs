@@ -35,7 +35,7 @@ namespace FMMVC
                 options.Cookie.HttpOnly = true;
             });
             services.AddScoped<IFluffyRepo, FluffyRepo>();
-           services.AddScoped<IFluffyBL, FluffyBL>();
+            services.AddScoped<IFluffyBL, FluffyBL>();
             services.AddControllersWithViews();
             services.AddDbContext<FluffyDBContext>(options => options.UseNpgsql(Configuration.GetConnectionString("FluffyDB")));
         }
