@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FMBL\FMBL.csproj" />
+    <ProjectReference Include="..\FMModels\FMModels.csproj" />
+  </ItemGroup>
+
 </Project>

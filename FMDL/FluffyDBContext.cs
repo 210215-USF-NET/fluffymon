@@ -15,7 +15,6 @@ namespace FMDL
         protected FluffyDBContext()
         {
         }
-
         //declare to EF Core that these are the models I want to be persisted to my db
         public DbSet<Element> 
     }
