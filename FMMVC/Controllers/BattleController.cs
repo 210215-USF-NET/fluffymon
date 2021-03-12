@@ -24,7 +24,7 @@ namespace FMMVC.Controllers
         }
         public ActionResult Fight()
         {
-            return View();
+            return View("BattleWild");
         }
         // GET: BattleController/Details/5
         public ActionResult Details(int id)
