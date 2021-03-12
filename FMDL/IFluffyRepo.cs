@@ -6,6 +6,12 @@ namespace FMDL
 {
     public interface IFluffyRepo
     {
-        //List 
+        List<User> GetUsers();
+        User AddUser(User userName);
+        User GetUserByName(string name);
+        List<Fluffymon> GetFluffymons();
+        List<UserFluffymon> GetUserFluffymons();
+        Fluffymon AddFluffymons(Fluffymon newFluffymon);
+        UserFluffymon AddUserFluffymon(UserFluffymon newUFM);
     }
 }
