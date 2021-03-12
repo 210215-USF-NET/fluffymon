@@ -11,7 +11,6 @@ namespace FMBL
         List<User> GetUsers();
         void AddUser(User uName);
         User GetUserByName(string name);
-        List<Element> GetElements();
         List<Fluffymon> GetFluffymons();
         List<UserFluffymon> GetUserFluffymons();
         Fluffymon AddFluffymons(Fluffymon newFluffymon);
