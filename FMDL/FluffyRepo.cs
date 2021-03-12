@@ -48,7 +48,7 @@ namespace FMDL
 
         public List<UserFluffymon> GetUserFluffymons()
         {
-            return _context.UserFluffymons.AsNoTracking().ToList();
+            return _context.UserFluffymons.Include("Fluffymon").AsNoTracking().ToList();
         }
 
         public List<User> GetUsers()
