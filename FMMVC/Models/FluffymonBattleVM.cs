@@ -20,5 +20,11 @@ namespace FMMVC.Models
         public int MGTR { get; set; }
         public Element Element { get; set; }
         public List<UserFluffymon> UserFluffymon { get; set; }
+        public int UserId { get; set; }
+        [DisplayName("HP")]
+        public int UserHp { get; set; }
+        [DisplayName("Name")]
+        public string UserName { get; set; }
+        public List<Fluffymon> Fluffymon { get; set; }
     }
 }

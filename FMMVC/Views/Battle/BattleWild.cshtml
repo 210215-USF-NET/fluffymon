@@ -1,5 +1,6 @@
 ﻿@model FMMVC.Models.FluffymonBattleVM
 <h1>Battle Wild!!!!!</h1>
+
 <div>
     <dl class="row">
         <dt class="col-sm-2">
@@ -32,6 +33,19 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Element)
         </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd class= "col-sm-10">
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UserHp)
+        </dt>
+        <dd class= "col-sm-10">
+            @Html.DisplayFor(model =>model.UserHp)
+        </dd>
+
     </dl>
 </div>
 <div>
