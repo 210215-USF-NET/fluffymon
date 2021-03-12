@@ -32,7 +32,8 @@ namespace FMMVC.Models
         public static void north(){
             int tempy = y;
             tempy -= 1;
-            if (tempy >= 0) {
+            if (tempy >= 0)
+            {
                 y = tempy;
             }
             }
@@ -40,7 +41,7 @@ namespace FMMVC.Models
         {
             int tempy = y;
             tempy += 1;
-            if (tempy >= 5)
+            if (tempy < 5)
             {
                 y = tempy;
             }
@@ -49,21 +50,21 @@ namespace FMMVC.Models
 
         public static void east()
         {
-            int tempy = x;
-            tempy += 1;
-            if (tempy >= 5)
+            int tempx = x;
+            tempx += 1;
+            if (tempx >= 0)
             {
-                x = tempy;
+                x = tempx;
             }
         }
 
         public static void west()
         {
-            int tempy = x;
-            tempy -= 1;
-            if (tempy <= 0)
+            int tempx = x;
+            tempx -= 1;
+            if (tempx < 6)
             {
-                x = tempy;
+                x = tempx;
             }
         }
 
