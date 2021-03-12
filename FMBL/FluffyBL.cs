@@ -9,9 +9,10 @@ namespace FMBL
     {
         private IFluffyRepo _repo;
 
+
         public FluffyBL(IFluffyRepo repo)
         {
-            _repo = repo;
+            _repo = repo; 
         }
 
         public Fluffymon AddFluffymons(Fluffymon newFluffymon)
@@ -41,6 +42,7 @@ namespace FMBL
 
         public User GetUserByName(string name)
         {
+
             return _repo.GetUserByName(name);
         }
 
