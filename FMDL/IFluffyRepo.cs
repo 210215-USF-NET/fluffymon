@@ -1,8 +1,11 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using FMModels;
+
 
 namespace FMDL
 {
-    public class IFluffyRepo
+    public interface IFluffyRepo
     {
+        List 
     }
 }
