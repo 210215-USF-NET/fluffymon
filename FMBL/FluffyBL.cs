@@ -30,11 +30,6 @@ namespace FMBL
             return _repo.AddUserFluffymon(newUFM);
         }
 
-        public List<Element> GetElements()
-        {
-            return _repo.GetElements();
-        }
-
         public List<Fluffymon> GetFluffymons()
         {
             return _repo.GetFluffymons();

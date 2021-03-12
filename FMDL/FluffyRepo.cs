@@ -32,11 +32,6 @@ namespace FMDL
             return newUFM;
         }
 
-        public List<Element> GetElements()
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Fluffymon> GetFluffymons()
         {
             throw new NotImplementedException();
