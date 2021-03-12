@@ -16,17 +16,20 @@ namespace FMDL
         }
         public Fluffymon AddFluffymons(Fluffymon newFluffymon)
         {
-            throw new NotImplementedException();
+            _context.Fluffymons.Add(newFluffymon);
+            return newFluffymon;
         }
 
         public User AddUser(User userName)
         {
-            throw new NotImplementedException();
+            _context.Users.Add(userName);
+            return userName;
         }
 
         public UserFluffymon AddUserFluffymon(UserFluffymon newUFM)
         {
-            throw new NotImplementedException();
+            _context.UserFluffymons.Add(newUFM);
+            return newUFM;
         }
 
         public List<Element> GetElements()
