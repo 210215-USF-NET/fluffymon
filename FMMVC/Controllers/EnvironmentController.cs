@@ -47,7 +47,11 @@ namespace FMMVC.Controllers
         public ActionResult School()
         {
             return View();
+        }
 
+        public ActionResult Library()
+        {
+            return View();
         }
 
 
@@ -70,7 +74,6 @@ namespace FMMVC.Controllers
 
         public ActionResult West()
         {
-
             env.west();
 
             return RedirectToAction(env.GetLocation());
