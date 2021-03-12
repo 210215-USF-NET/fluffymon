@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FMBL;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,46 +8,33 @@ using System.Threading.Tasks;
 
 namespace FMMVC.Controllers
 {
-    public class BattleController : Controller
+    public class CapturedController : Controller
     {
-        // GET: BattleController
+        private IFluffyBL _fluffyBL;
+        public CapturedController(IFluffyBL fluffyBL)
+        {
+            _fluffyBL = fluffyBL;
+        }
+
+        // GET: CapturedController
         public ActionResult Index()
         {
-            return View();
+            return View(_fluffyBL.GetUserFluffymons());
         }
-        public ActionResult BattleWild()
-        {
-            return View();
-        }
-        public ActionResult BattleUser()
-        {
-            return View();
-        }
-        public ActionResult Fight()
-        {
-            /*
-             *Wild Fluffymon = Attacker, User Fluffymon = Defender, User
-             *
-             DMGDef = Defender.Fluffiness - Attacker.AES
-             Attacker.Fluffiness = Attacker.Fluffiness - DMGDef
-             DMGAtk = Defender.Fluffiness - Defender.AES
-             User.HP = Defender.Fluffiness - DMGAtk
-             */
-            return View("BattleWild");
-        }
-        // GET: BattleController/Details/5
+
+        // GET: CapturedController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: BattleController/Create
+        // GET: CapturedController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: BattleController/Create
+        // POST: CapturedController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -61,13 +49,13 @@ namespace FMMVC.Controllers
             }
         }
 
-        // GET: BattleController/Edit/5
+        // GET: CapturedController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: BattleController/Edit/5
+        // POST: CapturedController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -82,13 +70,13 @@ namespace FMMVC.Controllers
             }
         }
 
-        // GET: BattleController/Delete/5
+        // GET: CapturedController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: BattleController/Delete/5
+        // POST: CapturedController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
